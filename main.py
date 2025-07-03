@@ -20,14 +20,12 @@ while True:
             print(f"{i + 1}: {task}")
     elif choice == '3':
         task = input("Enter task number to remove: ")
-        try:
-            task = int(task)
-            if task < 1 or task > len(tasks):
-                print("Invalid task number.")
-            else:
-                tasks.pop(task - 1)
-        except ValueError:
+        task = int(task)
+        if task < 1 or task > len(tasks):
             print("Invalid task number.")
+        else:
+            tasks.pop(task - 1)
+
     elif choice == '4':
         break
     else:
